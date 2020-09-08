@@ -1,0 +1,29 @@
+<script>
+
+    function solution(participant, completion) {
+        console.log(participant);
+        console.log(completion);
+        var answer = '';
+
+        for (var i = 0; i < completion.length; i++) {
+            for (j = 0; j < participant.length; j++) {
+
+            if(completion[i] == participant[j] ){
+                // j배열에서 배열빼기
+                participant.splice( j,1 );
+            }else if(completion[i] != participant[j]){
+                continue;
+            }
+
+            }
+        }
+
+        answer = participant[0];
+        console.log("answer=>",answer);
+        return answer;
+    }
+
+    // solution(["leo", "kiki", "eden"], ["eden", "kiki"]);
+    solution(["marina", "josipa", "nikola", "vinko", "filipa"], ["josipa", "filipa", "marina", "nikola"]);
+   
+</script>
